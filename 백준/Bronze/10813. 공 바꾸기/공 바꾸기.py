@@ -1,14 +1,11 @@
 n, m = map(int, input().split())
-array = []
-for i in range(n+1):
-    array.append(i)
+array  = [ i for i in range(1, n+1)]
 
-for j in range(m):
-    a, b = map(int, input().split())
-    temp = 0
-    temp = array[a]
-    array[a] = array[b]
-    array[b] = temp
+for _ in range(m):
+  i, j = map(int, input().split())
+  temp = array[i-1]
+  array[i-1] = array[j-1]
+  array[j-1] = temp
 
-for k in range(1,n+1):
-    print(array[k],end=" ")
+for i in array:
+  print(i, end=" ")
