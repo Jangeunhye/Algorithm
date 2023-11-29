@@ -1,13 +1,12 @@
-s = input()
-s = s.upper()
-
-alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+s = input().upper()
+alphabet = list(set(s))
 array = []
+
 for i in alphabet:
   array.append(s.count(i))
 
-if (array.count(max(array))==1):
-  index = array.index(max(array))
-  print(alphabet[index])
-else:
+
+if array.count(max(array))>=2:
   print("?")
+else:
+  print(alphabet[array.index(max(array))])
