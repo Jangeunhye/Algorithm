@@ -1,23 +1,9 @@
 s = input()
-
-second = 0
-
+dial = ["ABC","DEF","GHI","JKL","MNO","PQRS","TUV","WXYZ"]
+sum =0
 for i in s:
-  if i in 'ABC':
-    second = second + 3
-  elif i in 'DEF':
-    second = second + 4
-  elif i in 'GHI':
-    second = second + 5
-  elif i in 'JKL':
-    second = second + 6
-  elif i in 'MNO':
-    second = second + 7
-  elif i in 'PQRS':
-    second = second + 8
-  elif i in 'TUV':
-    second = second + 9
-  elif i in 'WXYZ':
-    second = second + 10
+  for j in dial:
+    if i in j:
+      sum = sum+ dial.index(j)+3
 
-print(second)
+print(sum)
