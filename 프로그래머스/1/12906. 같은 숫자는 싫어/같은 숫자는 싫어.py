@@ -1,10 +1,10 @@
 def solution(arr):
     answer = []
-    last = 10
+    
     for i in arr:
-        if(last!=i):
-            answer.append(i)
-            last=i
+        if (answer[-1:]==[i]):
+            continue
+        answer.append(i)
     
     
     return answer
