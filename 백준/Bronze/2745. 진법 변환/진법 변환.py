@@ -1,10 +1,10 @@
 N, B = input().split()
-B = int(B)
-sum = 0
+array = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-for i in range(len(N)):
-    if(N[i].isdigit()):
-        sum += B**(len(N)-i-1)*int(N[i])
-    else:
-        sum +=(B**(len(N)-i-1) )* (ord(N[i])-55)
-print(sum)
+N = N[::-1]
+result = 0
+
+for i, n in enumerate(N):
+    result+= (int(B)**i)* (array.index(n))
+
+print(result)
