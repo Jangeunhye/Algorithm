@@ -1,7 +1,6 @@
 function solution(arr) {
     let answer = 0;
-    arr.forEach((item)=>{
-        answer+=item
-    })
-    return answer/arr.length
+    answer = arr.reduce((acc,cur)=>
+              acc+=cur)/arr.length
+    return answer
 }
